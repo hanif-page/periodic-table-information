@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table Information</title>
+
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <script src="https://kit.fontawesome.com/33a03a8209.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./src/styles/output.css">
+    <link rel="stylesheet" href="./src/styles/font.css">
+</head>
+<body class="overflow-hidden">
+
+    <div class="loader transition-opacity duration-1000 fixed z-[99999] inset-0 bg-white flex items-center justify-center">
+        <div class="spinner"></div>
+    </div>
+
+    <header class="p-container my-6">
+        <h1 class="capitalize font-bold text-xl lg:text-2xl">periodic table information</h1>
+        <p class="text-sm lg:text-base">
+            Note that, the order of the element is based on the number of the atomic number.
+        </p>
+    </header>
+
+    <main class="p-container min-h-screen">
+        <!-- where the symbol displayed -->
+        <div id="main-table" class="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-8 gap-1 lg:gap-2 my-2 min-h-[40vh]"></div>
+
+        <div href="" class="text-sm lg:text-base">API from <a target="_blank" href="https://github.com/neelpatel05/periodic-table-api" class="underline hover:text-orange-600">neelpatel05</a> </div>
+    </main>
+
+    <footer class="p-container text-center mt-12">
+        <p class="text-sm lg:text-base">Copyright &copy; 2021. Made by <a target="_blank" href="https://hanif-page.netlify.app/" class="underline hover:text-orange-600">Hanif</a></p>
+        <div class="flex space-x-3 items-center justify-center my-3">
+            <a target="_blank" href="https://www.instagram.com/amrrhaniff/">
+                <!-- <i class="text-lg fa-brands fa-instagram"></i> -->
+                <span class="iconify w-6 h-6 lg:w-8 lg:h-8 hover:text-orange-400" data-icon="akar-icons:instagram-fill"></span>
+            </a>
+            <a target="_blank" href="https://github.com/hanif-page">
+                <!-- <i class="text-lg fa-brands fa-github"></i> -->
+                <span class="iconify w-7 h-7 lg:w-8 lg:h-8 hover:text-orange-400" data-icon="akar-icons:github-fill"></span>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/m-ammar-hanif-b41b1a215/">
+                <!-- <i class="text-lg fa-brands fa-linkedin"></i> -->
+                <span class="iconify w-7 h-7 lg:w-8 lg:h-8 hover:text-orange-400" data-icon="akar-icons:linkedin-box-fill"></span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- overlay -->
+    <div id="main-overlay" class="fixed z-10 inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 pointer-events-none">
+        <div class="w-10/12 max-w-[320px] flex flex-col items-end">
+            <span onclick="closeOverlay()" class="iconify w-8 h-8 text-white cursor-pointer hover:text-yellow-300" data-icon="clarity:window-close-line"></span>
+            <div id="overlay-content" class="w-full min-h-[300px] bg-white py-9 px-6 flex flex-col justify-center items-start space-y-10">
+                <header>
+                    <h1 class="capitalize font-bold text-4xl">h</h1>
+                    <h2 class="capitalize text-2xl">hydrogen</h2>
+                </header>
+
+                <main>
+                    <p class="text-lg text-gray-700 capitalize">
+                        Atomic Number : <span class="text-black">1</span>
+                    </p>
+                    <p class="text-lg text-gray-700 capitalize">
+                        Atomic Mass : <span class="text-black">1.00794(4)</span>
+                    </p>
+                    <p class="text-lg text-gray-700 capitalize">
+                        Electronic Configuration : <span class="text-black">1s1</span>
+                    </p>
+                    <p class="text-lg text-gray-700 capitalize">
+                        Electron Affinity : <span class="text-black">-73</span>
+                    </p>
+                    <p class="text-lg text-gray-700 capitalize">
+                        Ionization Energy : <span class="text-black">1312</span>
+                    </p>
+                </main>
+            </div>
+        </div>
+    </div>  
+
+    <script src="./src/scripts/script.js"></script>
+    <script src="./src/scripts/loader.js"></script>
+</body>
+</html>

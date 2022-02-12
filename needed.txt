@@ -1,0 +1,9 @@
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-github"></i>
+<i class="fa-brands fa-linkedin"></i>
+
+angle-right
+<i class="fa-solid fa-angle-right"></i>
+
+xmark
+<i class="fa-light fa-xmark"></i>
