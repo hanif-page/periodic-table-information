@@ -14,7 +14,7 @@
         @apply px-6 md:px-12
     }
 
-    #main-table > div 
+    #main-container > div 
     {
         @apply font-bold text-lg border border-black text-center cursor-pointer hover:bg-yellow-300
     }

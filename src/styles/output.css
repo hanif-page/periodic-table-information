@@ -485,7 +485,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-#main-table > div {
+#main-container > div {
   cursor: pointer;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -496,7 +496,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700;
 }
 
-#main-table > div:hover {
+#main-container > div:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
@@ -807,6 +807,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px) {
+  .md\:max-w-\[400px\] {
+    max-width: 400px;
+  }
+
   .md\:grid-cols-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }

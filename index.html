@@ -26,9 +26,9 @@
 
     <main class="p-container min-h-screen">
         <!-- where the symbol displayed -->
-        <div id="main-table" class="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-8 gap-1 lg:gap-2 my-2 min-h-[40vh]"></div>
+        <div id="main-container" class="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-8 gap-1 lg:gap-2 my-2 min-h-[40vh]"></div>
 
-        <div href="" class="text-sm lg:text-base">API from <a target="_blank" href="https://github.com/neelpatel05/periodic-table-api" class="underline hover:text-orange-600">neelpatel05</a> </div>
+        <div href="" class="text-sm lg:text-base">API from <a target="_blank" href="https://github.com/neelpatel05/periodic-table-api-go" class="underline hover:text-orange-600">neelpatel05</a> </div>
     </main>
 
     <footer class="p-container text-center mt-12">
@@ -51,31 +51,31 @@
 
     <!-- overlay -->
     <div id="main-overlay" class="fixed z-10 inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 pointer-events-none">
-        <div class="w-10/12 max-w-[320px] flex flex-col items-end">
+        <div class="w-10/12 max-w-[320px] md:max-w-[400px] flex flex-col items-end">
             <span onclick="closeOverlay()" class="iconify w-8 h-8 text-white cursor-pointer hover:text-yellow-300" data-icon="clarity:window-close-line"></span>
             <div id="overlay-content" class="w-full min-h-[300px] bg-white py-9 px-6 flex flex-col justify-center items-start space-y-10">
-                <header>
-                    <h1 class="capitalize font-bold text-4xl">h</h1>
-                    <h2 class="capitalize text-2xl">hydrogen</h2>
+                <!-- <header>
+                    <h1 class="capitalize font-bold text-4xl element-data"></h1>
+                    <h2 class="capitalize text-2xl element-data"></h2>
                 </header>
 
                 <main>
                     <p class="text-lg text-gray-700 capitalize">
-                        Atomic Number : <span class="text-black">1</span>
+                        Atomic Number : <span class="text-black element-data"></span>
                     </p>
                     <p class="text-lg text-gray-700 capitalize">
-                        Atomic Mass : <span class="text-black">1.00794(4)</span>
+                        Atomic Mass : <span class="text-black element-data"></span>
                     </p>
                     <p class="text-lg text-gray-700 capitalize">
-                        Electronic Configuration : <span class="text-black">1s1</span>
+                        Electronic Configuration : <span class="text-black element-data"></span>
                     </p>
                     <p class="text-lg text-gray-700 capitalize">
-                        Electron Affinity : <span class="text-black">-73</span>
+                        Electron Affinity : <span class="text-black element-data"></span>
                     </p>
                     <p class="text-lg text-gray-700 capitalize">
-                        Ionization Energy : <span class="text-black">1312</span>
+                        Ionization Energy : <span class="text-black element-data"></span>
                     </p>
-                </main>
+                </main> -->
             </div>
         </div>
     </div>  
