@@ -84,4 +84,9 @@ const isEmpty = (string) => {
     return string === "" ? "-" : string
 }
 
+// generating copyright year
+const copyrightYear = document.querySelector(".copyright .yyyy")
+const currentDate = new Date()
+copyrightYear.innerHTML = currentDate.getFullYear()
+
 generateElement();
