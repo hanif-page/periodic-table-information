@@ -1,5 +1,6 @@
 const generateElement = async () => {
-    const apiURL = "https://periodic-table-api.herokuapp.com/"
+    // const apiURL = "https://periodic-table-api.herokuapp.com/"
+    const apiURL = "https://neelpatel05.pythonanywhere.com/" // the python version. The golang one is not working.
     const mainData = await getData(apiURL)
     
     const mainTable = document.querySelector("#main-container")
@@ -41,7 +42,8 @@ const closeOverlay = () => {
 }
 
 const updateElementInformation = async (elementSymbol) => {
-    const elementData = await getData(`https://periodic-table-api.herokuapp.com/atomicSymbol/${elementSymbol}`)
+    // const elementData = await getData(`https://periodic-table-api.herokuapp.com/atomicSymbol/${elementSymbol}`)
+    const elementData = await getData(`https://neelpatel05.pythonanywhere.com/element/symbol?symbol=${elementSymbol}`) // // the python version. The golang one is not working.
 
     const mainOverlayContent = document.querySelector("#overlay-content")
     const updatedContent = `
@@ -55,7 +57,7 @@ const updateElementInformation = async (elementSymbol) => {
                 Atomic Number : <span class="text-black element-data">${isEmpty(elementData.atomicNumber)}</span>
             </p>
             <p class="text-lg text-gray-700 capitalize">
-                Atomic Mass : <span class="text-black element-data">${isEmpty(elementData.atomicMass)}</span>
+                Atomic Mass : <span class="text-black element-data">${convertAtomicMass(elementData.atomicMass)}</span>
             </p>
             <p class="text-lg text-gray-700 capitalize">
                 Electronic Configuration : <span class="text-black element-data">${isEmpty(elementData.electronicConfiguration)}</span>
@@ -82,6 +84,12 @@ const resetElementInformation = () => {
 
 const isEmpty = (string) => {
     return string === "" ? "-" : string
+}
+
+// converting from "24.3050(6)" to 24
+const convertAtomicMass = (str) => {
+    if(str === "") return "-" 
+    else return Math.round(parseFloat(str.split("(").shift()))
 }
 
 // generating copyright year
